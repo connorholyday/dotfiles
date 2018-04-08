@@ -5,12 +5,21 @@ execute pathogen#infect()
 "====================
 
 " Space as a Leader
-let mapleader=" "
+let mapleader = "\<Space>"
 " Use Vim features, not Vi
 set nocompatible
 " Use UTF-8 by default
 set encoding=utf-8
 set fileencoding=utf-8
+filetype plugin indent on
+" More natural split locations
+set splitbelow
+set splitright
+
+" Remove backup files
+set nobackup
+set nowritebackup
+set noswapfile
 
 "====================
 " THEME
@@ -29,6 +38,18 @@ set showmode
 set title
 " Show the (partial) command as it’s being typed
 set showcmd
+" Enable fuzzy find
+set path+=**
+" Show tab completion menu
+set wildmenu
+" Start scrolling before reaching the bottom
+set scrolloff=1
+set sidescrolloff=5
+
+" Allow color schemes to do bright colors without forcing bold
+if &t_Co == 8 && $TERM !~# '^linux\|^Eterm'
+  set t_Co=16
+endif
 
 "====================
 " NUMBERING
@@ -38,6 +59,8 @@ set showcmd
 set relativenumber
 " ...but absolute numbers on the current line (hybrid numbering)
 set number
+" Numbers that lead with 0 are decimal not octal
+set nrformats-=octal
 
 "====================
 " REMAPS
