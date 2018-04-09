@@ -19,8 +19,8 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'mattn/emmet-vim', { 'for': 'html' }
 Plug 'airblade/vim-gitgutter'
 Plug 'w0rp/ale'
-Plug 'junegunn/fzf'
 Plug 'scrooloose/nerdtree'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 filetype plugin indent on
 call plug#end()
