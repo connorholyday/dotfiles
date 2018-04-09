@@ -1,6 +1,31 @@
 execute pathogen#infect()
 
 "====================
+" PLUGINS
+"====================
+
+if empty(glob('~/.vim/autoload/plug.vim'))
+    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+call plug#begin('~/.vim/plugged')
+
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-repeat'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'mattn/emmet-vim', { 'for': 'html' }
+Plug 'airblade/vim-gitgutter'
+Plug 'w0rp/ale'
+Plug 'junegunn/fzf'
+Plug 'scrooloose/nerdtree'
+
+filetype plugin indent on
+call plug#end()
+
+"====================
 " SETUP
 "====================
 
@@ -11,7 +36,6 @@ set nocompatible
 " Use UTF-8 by default
 set encoding=utf-8
 set fileencoding=utf-8
-filetype plugin indent on
 " More natural split locations
 set splitbelow
 set splitright
