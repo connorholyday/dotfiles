@@ -15,10 +15,10 @@ module.exports = {
     fontFamily: 'Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
 
     // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
-    cursorColor: '#97979b',
+    cursorColor: '#ff6ac1',
 
     // `BEAM` for |, `UNDERLINE` for _, `BLOCK` for █
-    cursorShape: 'UNDERLINE',
+    cursorShape: 'BLOCK',
 
     // set to true for blinking cursor
     cursorBlink: false,
@@ -62,7 +62,7 @@ module.exports = {
       magenta: '#ff6ac1',
       cyan: '#9aedfe',
       white: '#f1f1f0',
-      lightBlack: '#686868',
+      lightBlack: '#43454F',
       lightRed: '#ff5c57',
       lightGreen: '#5af78e',
       lightYellow: '#f3f99d',
@@ -120,7 +120,8 @@ module.exports = {
   //   `@company/project`
   //   `project#1.0.1`
   plugins: [
-      'hyperborder'
+      'hyperborder',
+      'hyperterm-cursor'
     ],
 
   // in development, you can create a directory under
