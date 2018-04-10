@@ -20,7 +20,9 @@ Plug 'mattn/emmet-vim', { 'for': 'html' }
 Plug 'airblade/vim-gitgutter'
 Plug 'w0rp/ale'
 Plug 'scrooloose/nerdtree'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
+" Plug 'mhartington/oceanic-next'
 
 filetype plugin indent on
 call plug#end()
@@ -39,15 +41,11 @@ set fileencoding=utf-8
 " More natural split locations
 set splitbelow
 set splitright
-
+set clipboard=unnamed
 " Remove backup files
 set nobackup
 set nowritebackup
 set noswapfile
-
-"====================
-" THEME
-"====================
 
 syntax enable
 set background=dark
@@ -69,8 +67,6 @@ set wildmenu
 " Start scrolling before reaching the bottom
 set scrolloff=1
 set sidescrolloff=5
-
-highlight LineNr ctermfg=DarkGrey
 
 " Allow color schemes to do bright colors without forcing bold
 if &t_Co == 8 && $TERM !~# '^linux\|^Eterm'
