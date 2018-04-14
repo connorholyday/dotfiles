@@ -9,6 +9,7 @@ TODO:
 - Configs
 
 Homebrew:
+- tig
 - tmux
 - tree
 - hyper.js
