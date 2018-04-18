@@ -22,10 +22,18 @@ Plug 'w0rp/ale'
 Plug 'scrooloose/nerdtree'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
+Plug 'sheerun/vim-polyglot'
+Plug 'mileszs/ack.vim'
+Plug 'Olical/vim-enmasse'
 " Plug 'mhartington/oceanic-next'
 
 filetype plugin indent on
 call plug#end()
+
+" User Ag where possible
+if executable('ag')
+    let g:ackprg = 'ag --vimgrep'
+endif
 
 "====================
 " SETUP
