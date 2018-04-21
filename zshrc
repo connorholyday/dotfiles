@@ -39,9 +39,6 @@ autoload -Uz promptinit
 promptinit
 prompt pure
 
-# Include enhancd
-source ~/.oh-my-zsh/custom/plugins/enhancd/init.sh
-
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
