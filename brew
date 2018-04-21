@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
 brew install findutils
 
