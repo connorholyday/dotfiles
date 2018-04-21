@@ -5,6 +5,12 @@
 # To install useful key bindings and fuzzy completion:
 $(brew --prefix)/opt/fzf/install
 
+# oh my zsh
+curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+
+# zsh syntax highlighting
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
 mkdir -p ~/.vim/bundle
 mkdir -p ~/.config/nvim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \

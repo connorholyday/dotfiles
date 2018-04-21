@@ -65,3 +65,5 @@ export EDITOR='nvim'
 #
 # Example aliases
 alias tower="gittower ."
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
