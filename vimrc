@@ -23,6 +23,9 @@ Plug 'junegunn/fzf.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'mileszs/ack.vim'
 Plug 'Olical/vim-enmasse'
+Plug 'chrisbra/Colorizer'
+Plug 'easymotion/vim-easymotion'
+Plug 'tpope/vim-commentary'
 " Plug 'mhartington/oceanic-next'
 
 filetype plugin indent on
