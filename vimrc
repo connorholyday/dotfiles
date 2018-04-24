@@ -26,6 +26,7 @@ Plug 'Olical/vim-enmasse'
 Plug 'chrisbra/Colorizer'
 Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-commentary'
+Plug 'connorholyday/vim-snazzy'
 " Plug 'mhartington/oceanic-next'
 
 filetype plugin indent on
@@ -81,6 +82,8 @@ set sidescrolloff=5
 if &t_Co == 8 && $TERM !~# '^linux\|^Eterm'
   set t_Co=16
 endif
+
+colorscheme snazzy
 
 "====================
 " NUMBERING
