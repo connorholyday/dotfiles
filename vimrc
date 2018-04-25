@@ -132,3 +132,13 @@ set autoindent
 
 set showmatch
 set mat=2
+
+"====================
+" FZF
+"====================
+
+if executable('fzf')
+    nnoremap <leader>f :Files<cr>
+    nnoremap <leader>g :GFiles<cr>
+    nnoremap <leader>b :Buffers<cr>
+end
