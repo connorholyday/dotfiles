@@ -13,6 +13,9 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-abolish'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'mattn/emmet-vim', { 'for': 'html' }
 Plug 'airblade/vim-gitgutter'
@@ -25,9 +28,7 @@ Plug 'mileszs/ack.vim'
 Plug 'Olical/vim-enmasse'
 Plug 'chrisbra/Colorizer'
 Plug 'easymotion/vim-easymotion'
-Plug 'tpope/vim-commentary'
 Plug 'connorholyday/vim-snazzy'
-" Plug 'mhartington/oceanic-next'
 
 filetype plugin indent on
 call plug#end()
