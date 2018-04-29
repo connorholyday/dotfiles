@@ -22,3 +22,7 @@ ln -s "`pwd`"/vimrc ~/.config/nvim/init.vim
 ln -s "`pwd`"/zshrc ~/.zshrc
 ln -s "`pwd`"/gitconfig ~/.gitconfig
 /usr/local/bin/nvim +PlugInstall +qall
+
+go get golang.org/x/tools/cmd/godoc
+go get github.com/golang/lint/golint
+go get golang.org/x/tour/gotour

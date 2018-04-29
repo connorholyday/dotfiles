@@ -19,6 +19,7 @@ brew install imagemagick
 brew install node
 brew install tree
 brew install tmux
+brew install go
 
 brew cask install hyper
 brew cask install flux
