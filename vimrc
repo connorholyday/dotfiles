@@ -103,6 +103,8 @@ set nrformats-=octal
 inoremap jj <Esc>
 inoremap jk <Esc>
 
+" Escape from terminal
+tnoremap <ESC> <C-\><C-n>
 "====================
 " SEARCHING
 "====================
