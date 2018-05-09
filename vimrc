@@ -59,12 +59,8 @@ set noswapfile
 syntax enable
 set background=dark
 
-" Always show status line
-set laststatus=2
 " Show the cursor position
 set ruler
-" Show the current mode
-set showmode
 " Show the filename in the window titlebar
 set title
 " Show the (partial) command as it’s being typed
@@ -132,6 +128,47 @@ set autoindent
 
 set showmatch
 set mat=2
+
+"====================
+" STATUSLINE
+"====================
+
+" Always show status line
+set laststatus=2
+" Define all the different modes
+let g:currentmode={
+	\ 'n'  : 'Normal',
+	\ 'no' : 'N·Operator Pending',
+	\ 'v'  : 'Visual',
+	\ 'V'  : 'V·Line',
+	\ '' : 'V·Block',
+	\ 's'  : 'Select',
+	\ 'S'  : 'S·Line',
+	\ '' : 'S·Block',
+	\ 'i'  : 'Insert',
+	\ 'R'  : 'Replace',
+	\ 'Rv' : 'V·Replace',
+	\ 'c'  : 'Command',
+	\ 'cv' : 'Vim Ex',
+	\ 'ce' : 'Ex',
+	\ 'r'  : 'Prompt',
+	\ 'rm' : 'More',
+	\ 'r?' : 'Confirm',
+	\ '!'  : 'Shell',
+	\}
+set statusline=
+set statusline+=%(%{&buflisted?bufnr('%'):''}%)
+set statusline+=%(\ %)
+set statusline+=[%{toupper(g:currentmode[mode()])}]
+set statusline+=%(\ %)
+set statusline+=%f%r%m\  " File path, as typed or relative to current directory
+set statusline+=%{&modified?'+\ ':''}
+set statusline+=%{&readonly?'\ ':''}
+set statusline+=%= " Separation point between left and right aligned items
+set statusline+=\ %{&filetype!=#''?&filetype:'none'}
+set statusline+=%(\ %{(&bomb\|\|&fileencoding!~#'^$\\\|utf-8'?'\ '.&fileencoding.(&bomb?'-bom':''):'')
+  \.(&fileformat!=#(has('win32')?'dos':'unix')?'\ '.&fileformat:'')}%)
+set statusline+=\ %{strftime('%H:%M')} " Show time 24hr : minutes
 
 "====================
 " FZF
