@@ -58,6 +58,12 @@ chunkc set focused_border_width          2
 chunkc set focused_border_radius         5
 chunkc set focused_border_skip_floating  0
 
+# window rules
+chunkc tiling::rule --owner \"System Preferences\" --subrole AXStandardwindow --state float
+chunkc tiling::rule --owner Harvest --state float
+chunkc tiling::rule --owner 1Password --state float
+chunkc tiling::rule --owner Simulator --state float
+
 #
 # NOTE: specify plugins to load when chunkwm starts.
 #       if chunkc plugin_dir is not set, the absolutepath is necessary.
