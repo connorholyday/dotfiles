@@ -155,6 +155,7 @@ let g:currentmode={
 	\ 'rm' : 'More',
 	\ 'r?' : 'Confirm',
 	\ '!'  : 'Shell',
+	\ 't'  : 'Terminal',
 	\}
 set statusline=
 set statusline+=%(%{&buflisted?bufnr('%'):''}%)
