@@ -6,6 +6,7 @@
 $(brew --prefix)/opt/fzf/install
 
 mkdir -p ~/.vim/bundle
+mkdir -p ~/.vim/undo
 mkdir -p ~/.config/nvim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
