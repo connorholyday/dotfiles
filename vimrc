@@ -104,6 +104,9 @@ set nrformats-=octal
 " `jj` and `jk` to throw you into normal mode from insert mode
 inoremap jj <Esc>
 inoremap jk <Esc>
+" Move visually
+inoremap j gj
+inoremap k gk
 
 " Escape from terminal
 tnoremap <ESC> <C-\><C-n>
