@@ -29,6 +29,7 @@ Plug 'Olical/vim-enmasse'
 Plug 'chrisbra/Colorizer'
 Plug 'easymotion/vim-easymotion'
 Plug 'connorholyday/vim-snazzy'
+Plug 'ludovicchabant/vim-gutentags'
 
 filetype plugin indent on
 call plug#end()
