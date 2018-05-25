@@ -63,11 +63,6 @@ module.exports = {
         bell: 'SOUND',
         copyOnSelect: false,
 
-
-        hyperBorder: {
-            borderWidth: '1px'
-        },
-
         opacity: 0.95,
 
         hyperclean: {
