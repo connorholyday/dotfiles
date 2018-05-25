@@ -178,7 +178,6 @@ set statusline+=%= " Separation point between left and right aligned items
 set statusline+=\ %{&filetype!=#''?&filetype:'none'}
 set statusline+=%(\ %{(&bomb\|\|&fileencoding!~#'^$\\\|utf-8'?'\ '.&fileencoding.(&bomb?'-bom':''):'')
   \.(&fileformat!=#(has('win32')?'dos':'unix')?'\ '.&fileformat:'')}%)
-set statusline+=\ %{strftime('%H:%M')} " Show time 24hr : minutes
 
 "====================
 " FZF
