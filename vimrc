@@ -112,8 +112,8 @@ set nrformats-=octal
 inoremap jj <Esc>
 inoremap jk <Esc>
 " Move visually
-inoremap j gj
-inoremap k gk
+nnoremap j gj
+nnoremap k gk
 
 " Escape from terminal
 tnoremap <ESC> <C-\><C-n>
