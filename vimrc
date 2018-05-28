@@ -188,3 +188,7 @@ if executable('fzf')
     nnoremap <leader>g :GFiles<cr>
     nnoremap <leader>b :Buffers<cr>
 end
+
+let g:ale_linters = {
+\  'javascript': ['flow', 'eslint']
+\}
