@@ -41,6 +41,7 @@ if executable('ag')
     let g:ackprg = 'ag --vimgrep'
 endif
 
+let g:SnazzyTransparent = 1
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
@@ -199,5 +200,3 @@ end
 let g:ale_linters = {
 \  'javascript': ['flow', 'eslint']
 \}
-
-hi Normal guibg=NONE
