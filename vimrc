@@ -30,6 +30,8 @@ Plug 'chrisbra/Colorizer'
 Plug 'easymotion/vim-easymotion'
 Plug 'connorholyday/vim-snazzy'
 Plug 'ludovicchabant/vim-gutentags'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 
 filetype plugin indent on
 call plug#end()
@@ -38,6 +40,11 @@ call plug#end()
 if executable('ag')
     let g:ackprg = 'ag --vimgrep'
 endif
+
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsSnippetDirectories = ['~/.vim/UltiSnips', 'UltiSnips']
 
 "====================
 " SETUP
