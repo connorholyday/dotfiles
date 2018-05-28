@@ -192,3 +192,5 @@ end
 let g:ale_linters = {
 \  'javascript': ['flow', 'eslint']
 \}
+
+hi Normal guibg=NONE
