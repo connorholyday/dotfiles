@@ -18,7 +18,6 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-abolish'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'mattn/emmet-vim', { 'for': 'html' }
-Plug 'airblade/vim-gitgutter'
 Plug 'w0rp/ale'
 Plug 'scrooloose/nerdtree'
 Plug '/usr/local/opt/fzf'
@@ -32,6 +31,7 @@ Plug 'connorholyday/vim-snazzy'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'mhinz/vim-signify'
 
 filetype plugin indent on
 call plug#end()
