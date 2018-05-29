@@ -9,18 +9,17 @@ export ZSH=/Users/connorholyday/.oh-my-zsh
 # Theme
 ZSH_THEME=""
 
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
-
 # Uncomment the following line to use hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
 
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+# Uncomment the following line to display red dots whilst waiting for completion.
+# COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
   gitfast
@@ -28,32 +27,24 @@ plugins=(
   brew
   npm
   composer
-  tmux
   zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
 
-# Enable Pure prompt
+# Enable pure prompt
 autoload -Uz promptinit
 promptinit
 prompt pure
+
+# Include enhancd
+source ~/.oh-my-zsh/custom/plugins/enhancd/init.sh
 
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-export EDITOR='nvim'
+export EDITOR="nvim"
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
@@ -66,12 +57,23 @@ export EDITOR='nvim'
 # Example aliases
 alias tower="gittower ."
 
+# Setup FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Go development
 export GOPATH="${HOME}/.go"
 export GOROOT="$(brew --prefix golang)/libexec"
 export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
-
 test -d "${GOPATH}" || mkdir "${GOPATH}"
 test -d "${GOPATH}/src/github.com" || mkdir -p "${GOPATH}/src/github.com"
+
+# Ripgrep config
+export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
+
+# Export highway
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+export PATH="/usr/local/opt/php@7.0/bin:$PATH"
+export PATH="/usr/local/opt/php@7.0/sbin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
+export PHP_AUTOCONF="/usr/local/bin/autoconf"
