@@ -16,9 +16,12 @@ ln -s "`pwd`"/vimrc ~/.vimrc
 ln -s "`pwd`"/vimrc ~/.config/nvim/init.vim
 ln -s "`pwd`"/zshrc ~/.zshrc
 ln -s "`pwd`"/gitconfig ~/.gitconfig
+ln -s "`pwd`"/gitignore ~/.gitignore
 ln -s "`pwd`"/hyper.js ~/.hyper.js
 ln -s "`pwd`"/chunkwmrc ~/.chunkwmrc
 ln -s "`pwd`"/skhdrc ~/.skhdrc
+ln -s "`pwd`"/ripgreprc ~/.ripgreprc
+ln -s "`pwd`"/ctags ~/.ctags
 
 chmod +x ~/.chunkwmrc
 

@@ -1,0 +1,20 @@
+# Compiled Python files
+*.pyc
+
+# Folder view configuration files
+.DS_Store
+Desktop.ini
+
+# Thumbnail cache files
+._*
+Thumbs.db
+
+# Sass Cache
+.sass-cache
+
+# Files that might appear on external disks
+.Spotlight-V100
+.Trashes
+
+# Tags
+tags

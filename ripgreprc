@@ -1,0 +1,6 @@
+--max-columns=150
+
+--glob=!tags
+--glob=!*.min.*
+
+--smart-case
