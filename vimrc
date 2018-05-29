@@ -33,6 +33,7 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'mhinz/vim-signify'
 Plug 'arnaud-lb/vim-php-namespace', { 'for': 'php' }
+Plug 'janko-m/vim-test'
 
 filetype plugin indent on
 call plug#end()
@@ -212,3 +213,13 @@ function! IPhpInsertUse()
 endfunction
 autocmd FileType php inoremap <Leader>u <Esc>:call IPhpInsertUse()<CR>
 autocmd FileType php noremap <Leader>u :call PhpInsertUse()<CR>
+
+"====================
+" Test
+"====================
+
+nmap <silent> t<C-n> :TestNearest<CR>
+nmap <silent> t<C-f> :TestFile<CR>   
+nmap <silent> t<C-s> :TestSuite<CR>  
+nmap <silent> t<C-l> :TestLast<CR>   
+nmap <silent> t<C-g> :TestVisit<CR>  
