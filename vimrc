@@ -32,6 +32,7 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'mhinz/vim-signify'
+Plug 'arnaud-lb/vim-php-namespace', { 'for': 'php' }
 
 filetype plugin indent on
 call plug#end()
@@ -200,3 +201,14 @@ end
 let g:ale_linters = {
 \  'javascript': ['flow', 'eslint']
 \}
+
+"====================
+" PHP
+"====================
+
+function! IPhpInsertUse()
+    call PhpInsertUse()
+    call feedkeys('a', 'n')
+endfunction
+autocmd FileType php inoremap <Leader>u <Esc>:call IPhpInsertUse()<CR>
+autocmd FileType php noremap <Leader>u :call PhpInsertUse()<CR>
