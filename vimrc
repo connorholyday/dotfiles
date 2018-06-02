@@ -43,11 +43,13 @@ if executable('ag')
     let g:ackprg = 'ag --vimgrep'
 endif
 
+set runtimepath+=~/.vim/UltiSnips
 let g:SnazzyTransparent = 1
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-let g:UltiSnipsSnippetDirectories = ['~/.vim/UltiSnips', 'UltiSnips']
+let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips']
+" let g:UltiSnipsSnippetDirectories = ['~/.vim/UltiSnips', 'UltiSnips']
 
 "====================
 " SETUP

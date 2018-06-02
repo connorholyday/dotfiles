@@ -14,6 +14,7 @@ curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ln -s "`pwd`"/vimrc ~/.vimrc
 ln -s "`pwd`"/vimrc ~/.config/nvim/init.vim
+ln -s "`pwd`"/vim/UltiSnips ~/.vim/UltiSnips
 ln -s "`pwd`"/zshrc ~/.zshrc
 ln -s "`pwd`"/gitconfig ~/.gitconfig
 ln -s "`pwd`"/gitignore ~/.gitignore
