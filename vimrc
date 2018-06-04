@@ -27,7 +27,6 @@ Plug 'easymotion/vim-easymotion'
 Plug 'connorholyday/vim-snazzy'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
 Plug 'mhinz/vim-signify'
 Plug 'arnaud-lb/vim-php-namespace', { 'for': 'php' }
 Plug 'janko-m/vim-test'
