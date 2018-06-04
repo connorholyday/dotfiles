@@ -20,10 +20,10 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'mattn/emmet-vim', { 'for': 'html' }
 Plug 'w0rp/ale'
 Plug 'scrooloose/nerdtree'
-Plug '/usr/local/opt/fzf'
-Plug 'junegunn/fzf.vim'
+" Plug '/usr/local/opt/fzf'
+" Plug 'junegunn/fzf.vim'
 Plug 'sheerun/vim-polyglot'
-Plug 'mileszs/ack.vim'
+" Plug 'mileszs/ack.vim'
 Plug 'Olical/vim-enmasse'
 Plug 'chrisbra/Colorizer'
 Plug 'easymotion/vim-easymotion'
@@ -202,11 +202,11 @@ set statusline+=%(\ %{(&bomb\|\|&fileencoding!~#'^$\\\|utf-8'?'\ '.&fileencoding
 " FZF
 "====================
 
-if executable('fzf')
-    nnoremap <leader>f :Files<cr>
-    nnoremap <leader>g :GFiles<cr>
-    nnoremap <leader>b :Buffers<cr>
-end
+" if executable('fzf')
+"     nnoremap <leader>f :Files<cr>
+"     nnoremap <leader>g :GFiles<cr>
+"     nnoremap <leader>b :Buffers<cr>
+" end
 
 let g:ale_linters = {
 \  'javascript': ['flow', 'eslint']
@@ -228,7 +228,7 @@ autocmd FileType php noremap <Leader>u :call PhpInsertUse()<CR>
 "====================
 
 nmap <silent> t<C-n> :TestNearest<CR>
-nmap <silent> t<C-f> :TestFile<CR>   
-nmap <silent> t<C-s> :TestSuite<CR>  
-nmap <silent> t<C-l> :TestLast<CR>   
-nmap <silent> t<C-g> :TestVisit<CR>  
+nmap <silent> t<C-f> :TestFile<CR>
+nmap <silent> t<C-s> :TestSuite<CR>
+nmap <silent> t<C-l> :TestLast<CR>
+nmap <silent> t<C-g> :TestVisit<CR>
