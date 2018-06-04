@@ -38,10 +38,17 @@ Plug 'janko-m/vim-test'
 filetype plugin indent on
 call plug#end()
 
-" User Ag where possible
-if executable('ag')
-    let g:ackprg = 'ag --vimgrep'
+" User ripgrep where possible
+if executable('rg')
+    set grepprg=rg\ --vimgrep
 endif
+
+" Open quickfix automatically if it's populated
+augroup myvimrc
+    autocmd!
+    autocmd QuickFixCmdPost [^l]* cwindow
+    autocmd QuickFixCmdPost l*    lwindow
+augroup END
 
 set runtimepath+=~/.vim/UltiSnips
 let g:SnazzyTransparent = 1
