@@ -93,17 +93,6 @@ endif
 colorscheme snazzy
 
 "====================
-" NUMBERING
-"====================
-
-" Set relative line numbers...
-set relativenumber
-" ...but absolute numbers on the current line (hybrid numbering)
-set number
-" Numbers that lead with 0 are decimal not octal
-set nrformats-=octal
-
-"====================
 " REMAPS
 "====================
 
