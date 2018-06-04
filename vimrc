@@ -17,9 +17,9 @@ Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-abolish'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'mattn/emmet-vim', { 'for': 'html' }
+Plug 'mattn/emmet-vim', { 'for': ['html', 'html.twig', 'blade'] }
 Plug 'w0rp/ale'
-Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'sheerun/vim-polyglot'
 Plug 'Olical/vim-enmasse'
 Plug 'chrisbra/Colorizer'
