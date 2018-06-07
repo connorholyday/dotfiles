@@ -70,6 +70,7 @@ export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
 # Export highway
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
 export PATH="/usr/local/opt/php@7.0/bin:$PATH"
 export PATH="/usr/local/opt/php@7.0/sbin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
