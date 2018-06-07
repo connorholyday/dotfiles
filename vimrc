@@ -26,7 +26,6 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'sheerun/vim-polyglot'
 Plug 'Olical/vim-enmasse'
 Plug 'chrisbra/Colorizer'
-Plug 'easymotion/vim-easymotion'
 Plug 'connorholyday/vim-snazzy'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'SirVer/ultisnips'
