@@ -5,7 +5,10 @@
 if empty(glob('~/.vim/autoload/plug.vim'))
     silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
         \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+    augroup InstallVimPlug
+        autocmd!
+        autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+    augroup END
 endif
 
 call plug#begin('~/.vim/plugged')
@@ -31,15 +34,13 @@ Plug 'mhinz/vim-signify'
 Plug 'arnaud-lb/vim-php-namespace', { 'for': 'php' }
 Plug 'janko-m/vim-test'
 
-filetype plugin indent on
 call plug#end()
 
 if executable('rg')
     set grepprg=rg\ --vimgrep
 endif
 
-" Open quickfix automatically if it's populated
-augroup myvimrc
+augroup AutoOpenQuickfix
     autocmd!
     autocmd QuickFixCmdPost [^l]* cwindow
     autocmd QuickFixCmdPost l*    lwindow
@@ -56,6 +57,7 @@ let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips']
 " SETUP
 "====================
 
+filetype plugin indent on
 let mapleader = "\<Space>"
 set encoding=utf-8
 set fileencoding=utf-8
@@ -117,21 +119,18 @@ nnoremap <CR> :noh<CR><CR>
 " INDENTATION
 "====================
 
+set tabstop=8
+set softtabstop=4
+set shiftwidth=4
 set expandtab
 set smarttab
-set shiftwidth=4
-set tabstop=4
 set autoindent
-set showmatch
-set mat=2
 
 "====================
 " STATUSLINE
 "====================
 
-" Always show status line
 set laststatus=2
-" Define all the different modes
 let g:currentmode={
 	\ 'n'  : 'Normal',
 	\ 'no' : 'N·Operator Pending',
@@ -180,12 +179,15 @@ let g:ale_linters = {
 " PHP
 "====================
 
-function! IPhpInsertUse()
+function! IPhpInsertUse() abort
     call PhpInsertUse()
     call feedkeys('a', 'n')
 endfunction
-autocmd FileType php inoremap <Leader>u <Esc>:call IPhpInsertUse()<CR>
-autocmd FileType php noremap <Leader>u :call PhpInsertUse()<CR>
+
+augroup PhpInsertUse
+    autocmd!
+    autocmd FileType php nnoremap <Leader>u :call PhpInsertUse()<CR>
+augroup END
 
 "====================
 " TESTS
