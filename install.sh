@@ -33,7 +33,7 @@ go get github.com/golang/lint/golint
 go get golang.org/x/tour/gotour
 
 # nvm
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+git clone https://github.com/lukechilds/zsh-nvm ~/.oh-my-zsh/custom/plugins/zsh-nvm
 
 # oh my zsh
 curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh

@@ -7,6 +7,9 @@ export ZSH=/Users/connorholyday/.oh-my-zsh
 # Theme
 ZSH_THEME=""
 
+# NVM
+export NVM_LAZY_LOAD=true
+
 # Uncomment the following line to use hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
@@ -19,11 +22,13 @@ ZSH_THEME=""
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  zsh-nvm
   git
   gitfast
   git-extras
   brew
   npm
+  docker
   composer
   zsh-syntax-highlighting
 )
@@ -35,21 +40,12 @@ autoload -Uz promptinit
 promptinit
 prompt pure
 
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
 export EDITOR="nvim"
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
+# Aliases
 alias tower="gittower ."
 
 # Go development
@@ -63,10 +59,8 @@ test -d "${GOPATH}/src/github.com" || mkdir -p "${GOPATH}/src/github.com"
 export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
 
 # Export highway
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
-export PATH="/usr/local/opt/php@7.0/bin:$PATH"
-export PATH="/usr/local/opt/php@7.0/sbin:$PATH"
+# export PATH="/usr/local/opt/php@7.0/bin:$PATH"
+# export PATH="/usr/local/opt/php@7.0/sbin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PHP_AUTOCONF="/usr/local/bin/autoconf"
