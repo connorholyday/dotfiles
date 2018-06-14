@@ -25,6 +25,7 @@
 	reb = "!r() { git rebase -i HEAD~$1; }; r"
     recent = for-each-ref --count=10 --sort=-committerdate refs/heads/ --format="%(refname:short)"
     slog = log --pretty=format:'%C(yellow)%h %Cred%ad %Cblue%an%Cgreen%d %Creset%s' --date=short
+	ctags = !.git/hooks/ctags
 
 [core]
 	# Use custom `.gitignore` and `.gitattributes`
@@ -86,3 +87,5 @@
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
+[init]
+	templatedir = ~/.git_template

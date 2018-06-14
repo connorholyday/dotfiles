@@ -27,7 +27,6 @@ Plug 'sheerun/vim-polyglot'
 Plug 'Olical/vim-enmasse'
 Plug 'chrisbra/Colorizer'
 Plug 'connorholyday/vim-snazzy'
-Plug 'ludovicchabant/vim-gutentags'
 Plug 'SirVer/ultisnips'
 Plug 'mhinz/vim-signify'
 Plug 'arnaud-lb/vim-php-namespace', { 'for': 'php' }
