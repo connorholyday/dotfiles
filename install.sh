@@ -22,7 +22,7 @@ ln -s "`pwd`"/hyper.js ~/.hyper.js
 ln -s "`pwd`"/chunkwmrc ~/.chunkwmrc
 ln -s "`pwd`"/skhdrc ~/.skhdrc
 ln -s "`pwd`"/ripgreprc ~/.ripgreprc
-ln -s "`pwd`"/hooks/ ~/.git_template/hooks/
+ln -s "`pwd`"/hooks/ ~/.git_template/
 ln -s "`pwd`"/ctags ~/.ctags
 
 chmod +x ~/.chunkwmrc
