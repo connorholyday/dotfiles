@@ -14,7 +14,6 @@ endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'tpope/vim-surround'
-Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-commentary'
@@ -22,7 +21,6 @@ Plug 'tpope/vim-abolish'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'mattn/emmet-vim', { 'for': ['html', 'html.twig', 'blade'] }
 Plug 'w0rp/ale'
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'sheerun/vim-polyglot'
 Plug 'Olical/vim-enmasse'
 Plug 'chrisbra/Colorizer'
@@ -45,7 +43,6 @@ augroup AutoOpenQuickfix
 augroup END
 
 set runtimepath+=~/.vim/UltiSnips
-let g:SnazzyTransparent = 1
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
@@ -66,11 +63,10 @@ set nobackup
 set nowritebackup
 set noswapfile
 set nrformats-=octal
-set title
 set showcmd
 set path+=**
 set wildmenu
-set scrolloff=1
+set scrolloff=5
 set sidescrolloff=5
 set undofile
 set undodir=$HOME/.vim/undo
@@ -89,6 +85,7 @@ if &t_Co == 8 && $TERM !~# '^linux\|^Eterm'
   set t_Co=16
 endif
 
+let g:SnazzyTransparent = 1
 colorscheme snazzy
 
 "====================
