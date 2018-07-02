@@ -1,8 +1,5 @@
-// Future versions of Hyper may add additional config options,
-// which will not automatically be merged into this file.
 // See https://hyper.is#cfg for all currently supported options.
 // for advanced config flags please refer to https://hyper.is/#cfg
-
 module.exports = {
     config: {
         updateChannel: 'stable',
@@ -23,18 +20,11 @@ module.exports = {
         backgroundColor: '#282a36',
         borderColor: '#222430',
 
-        // custom css to embed in the main window
         css: '',
-
-        // custom css to embed in the terminal window
         termCSS: '',
 
-        // custom padding (css format, i.e.: `top right bottom left`)
         padding: '10px',
 
-        // the full list. if you're going to provide the full color palette,
-        // including the 6 x 6 color cubes and the grayscale map, just provide
-        // an array here instead of a color map object
         colors: {
             black: '#282a36',
             red: '#ff5c57',
@@ -59,26 +49,16 @@ module.exports = {
         // for environment variables
         env: {},
 
-        // set to false for no bell
-        bell: 'SOUND',
+        bell: false,
         copyOnSelect: false,
-
-        opacity: 0.95,
 
         hyperclean: {
             hideTabs: true,
         },
     },
 
-    plugins: ['hyperterm-cursor', "hyper-opacity", "hyperclean"],
+    plugins: ['hyperterm-cursor', "hyperclean"],
 
-    // in development, you can create a directory under
-    // `~/.hyper_plugins/local/` and include it here
-    // to load it and avoid it being `npm install`ed
     localPlugins: [],
-
-    keymaps: {
-        // Example
-        // 'window:devtools': 'cmd+alt+o',
-    }
+    keymaps: {}
 };
