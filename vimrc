@@ -169,8 +169,12 @@ set statusline+=%(\ %{(&bomb\|\|&fileencoding!~#'^$\\\|utf-8'?'\ '.&fileencoding
 "====================
 
 let g:ale_linters = {
-\  'javascript': ['flow', 'eslint']
-\}
+            \   'javascript': ['flow', 'eslint']
+            \}
+
+let g:ale_fixers = {
+            \   'javascript': ['prettier']
+            \}
 
 "====================
 " PHP
