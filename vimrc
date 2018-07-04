@@ -2,6 +2,8 @@
 " PLUGINS
 "====================
 
+let g:has_async = v:version >= 800 || has('nvim')
+
 if empty(glob('~/.vim/autoload/plug.vim'))
     silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
         \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -18,17 +20,20 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-abolish'
+Plug 'Olical/vim-enmasse'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'mattn/emmet-vim', { 'for': ['html', 'html.twig', 'blade'] }
-Plug 'w0rp/ale'
 Plug 'sheerun/vim-polyglot'
-Plug 'Olical/vim-enmasse'
+Plug 'arnaud-lb/vim-php-namespace', { 'for': 'php' }
 Plug 'chrisbra/Colorizer'
 Plug 'connorholyday/vim-snazzy'
 Plug 'SirVer/ultisnips'
 Plug 'mhinz/vim-signify'
-Plug 'arnaud-lb/vim-php-namespace', { 'for': 'php' }
 Plug 'janko-m/vim-test'
+
+if g:has_async
+    Plug 'w0rp/ale'
+endif
 
 call plug#end()
 
@@ -94,8 +99,6 @@ colorscheme snazzy
 
 inoremap jj <Esc>
 inoremap jk <Esc>
-nnoremap j gj
-nnoremap k gk
 
 " Escape from terminal
 tnoremap <ESC> <C-\><C-n>
@@ -108,7 +111,6 @@ set cursorline
 set hlsearch
 set ignorecase
 set incsearch
-nnoremap <CR> :noh<CR><CR>
 
 "====================
 " INDENTATION
