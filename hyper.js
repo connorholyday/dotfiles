@@ -57,7 +57,7 @@ module.exports = {
         },
     },
 
-    plugins: ['hyperterm-cursor', "hyperclean"],
+    plugins: ['hyperterm-cursor', 'hyperclean'],
 
     localPlugins: [],
     keymaps: {}
