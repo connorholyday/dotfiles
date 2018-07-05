@@ -2,9 +2,6 @@
 
 ./brew
 
-# To install useful key bindings and fuzzy completion:
-$(brew --prefix)/opt/fzf/install
-
 mkdir -p ~/.vim/bundle
 mkdir -p ~/.vim/undo
 mkdir -p ~/.config/nvim
@@ -34,15 +31,11 @@ chmod +x hooks/post-rewrite
 
 /usr/local/bin/nvim +PlugInstall +qall
 
-go get golang.org/x/tools/cmd/godoc
-go get github.com/golang/lint/golint
-go get golang.org/x/tour/gotour
-
-# nvm
-git clone https://github.com/lukechilds/zsh-nvm ~/.oh-my-zsh/custom/plugins/zsh-nvm
-
 # oh my zsh
 curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+
+# zsh nvm
+git clone https://github.com/lukechilds/zsh-nvm ~/.oh-my-zsh/custom/plugins/zsh-nvm
 
 # zsh syntax highlighting
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
