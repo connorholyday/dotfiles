@@ -9,7 +9,6 @@ brew install zsh
 
 brew install vim
 brew install neovim
-brew install fzf
 
 brew install ripgrep
 brew install fd
@@ -18,7 +17,6 @@ brew install tig
 brew install imagemagick
 brew install node
 brew install tree
-brew install go
 brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 
 brew cask install hyper
