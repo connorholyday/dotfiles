@@ -36,6 +36,9 @@ brew cask install firefox
 brew tap caskroom/fonts
 brew cask install font-fira-code
 
+brew tap thoughtbot/formulae
+brew install rcm
+
 brew tap crisidev/homebrew-chunkwm
 brew install --HEAD --with-tmp-logging chunkwm
 brew install --HEAD --with-logging koekeishiya/formulae/skhd

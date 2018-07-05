@@ -2,6 +2,8 @@
 
 ./brew
 
+env RCRC=$HOME/dotfiles/rcrc rcup
+
 mkdir -p ~/.vim/bundle
 mkdir -p ~/.vim/undo
 mkdir -p ~/.config/nvim
@@ -9,18 +11,18 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-ln -s "`pwd`"/vimrc ~/.vimrc
+# ln -s "`pwd`"/vimrc ~/.vimrc
 ln -s "`pwd`"/vimrc ~/.config/nvim/init.vim
-ln -s "`pwd`"/vim/UltiSnips ~/.vim/UltiSnips
-ln -s "`pwd`"/zshrc ~/.zshrc
-ln -s "`pwd`"/gitconfig ~/.gitconfig
-ln -s "`pwd`"/gitignore ~/.gitignore
-ln -s "`pwd`"/hyper.js ~/.hyper.js
-ln -s "`pwd`"/chunkwmrc ~/.chunkwmrc
-ln -s "`pwd`"/skhdrc ~/.skhdrc
-ln -s "`pwd`"/ripgreprc ~/.ripgreprc
-ln -s "`pwd`"/git_template ~/.git_template
-ln -s "`pwd`"/ctags ~/.ctags
+# ln -s "`pwd`"/vim/UltiSnips ~/.vim/UltiSnips
+# ln -s "`pwd`"/zshrc ~/.zshrc
+# ln -s "`pwd`"/gitconfig ~/.gitconfig
+# ln -s "`pwd`"/gitignore ~/.gitignore
+# ln -s "`pwd`"/hyper.js ~/.hyper.js
+# ln -s "`pwd`"/chunkwmrc ~/.chunkwmrc
+# ln -s "`pwd`"/skhdrc ~/.skhdrc
+# ln -s "`pwd`"/ripgreprc ~/.ripgreprc
+# ln -s "`pwd`"/git_template ~/.git_template
+# ln -s "`pwd`"/ctags ~/.ctags
 
 chmod +x ~/.chunkwmrc
 chmod +x git_template/hooks/ctags
