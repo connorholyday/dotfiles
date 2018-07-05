@@ -19,15 +19,15 @@ ln -s "`pwd`"/hyper.js ~/.hyper.js
 ln -s "`pwd`"/chunkwmrc ~/.chunkwmrc
 ln -s "`pwd`"/skhdrc ~/.skhdrc
 ln -s "`pwd`"/ripgreprc ~/.ripgreprc
-ln -s "`pwd`"/hooks/ ~/.git_template/
+ln -s "`pwd`"/git_template ~/.git_template
 ln -s "`pwd`"/ctags ~/.ctags
 
 chmod +x ~/.chunkwmrc
-chmod +x hooks/ctags
-chmod +x hooks/post-checkout
-chmod +x hooks/post-commit
-chmod +x hooks/post-merge
-chmod +x hooks/post-rewrite
+chmod +x git_template/hooks/ctags
+chmod +x git_template/hooks/post-checkout
+chmod +x git_template/hooks/post-commit
+chmod +x git_template/hooks/post-merge
+chmod +x git_template/hooks/post-rewrite
 
 /usr/local/bin/nvim +PlugInstall +qall
 
