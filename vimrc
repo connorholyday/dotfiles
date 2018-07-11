@@ -41,12 +41,6 @@ if executable('rg')
     set grepprg=rg\ --vimgrep
 endif
 
-augroup AutoOpenQuickfix
-    autocmd!
-    autocmd QuickFixCmdPost [^l]* cwindow
-    autocmd QuickFixCmdPost l*    lwindow
-augroup END
-
 set runtimepath+=~/.vim/UltiSnips
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
