@@ -99,22 +99,23 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-if exists(':tnoremap')
-    tnoremap <C-h> <C-\><C-n><C-w><C-h>
-    tnoremap <C-j> <C-\><C-n><C-w><C-j>
-    tnoremap <C-k> <C-\><C-n><C-w><C-k>
-    tnoremap <C-l> <C-\><C-n><C-w><C-l>
+if has('nvim')
+    if exists(':tnoremap')
+        tnoremap <C-h> <C-\><C-n><C-w><C-h>
+        tnoremap <C-j> <C-\><C-n><C-w><C-j>
+        tnoremap <C-k> <C-\><C-n><C-w><C-k>
+        tnoremap <C-l> <C-\><C-n><C-w><C-l>
 
-    augroup TerminalDefaultInsert
-        autocmd!
-        autocmd TermOpen * setlocal nonumber norelativenumber
-        autocmd TermOpen * startinsert
-        autocmd BufWinEnter,WinEnter term://* startinsert
-        autocmd BufLeave term://* stopinsert
-    augroup END
+        augroup TerminalDefaultInsert
+            autocmd!
+            autocmd TermOpen * setlocal nonumber norelativenumber
+            autocmd TermOpen * startinsert
+            autocmd BufWinEnter,WinEnter term://* startinsert
+            autocmd BufLeave term://* stopinsert
+        augroup END
 
+    endif
 endif
-
 
 "====================
 " SEARCHING
