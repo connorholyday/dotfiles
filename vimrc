@@ -94,8 +94,27 @@ colorscheme snazzy
 inoremap jj <Esc>
 inoremap jk <Esc>
 
-" Escape from terminal
-tnoremap <ESC> <C-\><C-n>
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+if exists(':tnoremap')
+    tnoremap <C-h> <C-\><C-n><C-w><C-h>
+    tnoremap <C-j> <C-\><C-n><C-w><C-j>
+    tnoremap <C-k> <C-\><C-n><C-w><C-k>
+    tnoremap <C-l> <C-\><C-n><C-w><C-l>
+
+    augroup TerminalDefaultInsert
+        autocmd!
+        autocmd TermOpen * setlocal nonumber norelativenumber
+        autocmd TermOpen * startinsert
+        autocmd BufWinEnter,WinEnter term://* startinsert
+        autocmd BufLeave term://* stopinsert
+    augroup END
+
+endif
+
 
 "====================
 " SEARCHING
@@ -157,29 +176,6 @@ set statusline+=%=
 set statusline+=\ %{&filetype!=#''?&filetype:'none'}
 set statusline+=%(\ %{(&bomb\|\|&fileencoding!~#'^$\\\|utf-8'?'\ '.&fileencoding.(&bomb?'-bom':''):'')
   \.(&fileformat!=#(has('win32')?'dos':'unix')?'\ '.&fileformat:'')}%)
-
-
-"====================
-" TERMINAL
-"====================
-
-if exists(':tnoremap')
-  " Allow window navigation out of terminal
-  tnoremap <C-h> <C-\><C-n><C-w><C-h>
-  tnoremap <C-j> <C-\><C-n><C-w><C-j>
-  tnoremap <C-k> <C-\><C-n><C-w><C-k>
-  tnoremap <C-l> <C-\><C-n><C-w><C-l>
-
-  " jumping into a terminal split should automatically go into insert mode
-  augroup terminal
-    autocmd!
-    autocmd TermOpen * setlocal nonumber norelativenumber
-    autocmd TermOpen * startinsert
-    autocmd BufWinEnter,WinEnter term://* startinsert
-    autocmd BufLeave term://* stopinsert
-  augroup END
-
-endif
 
 "====================
 " LINTERS
