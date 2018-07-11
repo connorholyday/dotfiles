@@ -127,7 +127,7 @@ let g:currentmode={
 	\ 'no' : 'N·Operator Pending',
 	\ 'v'  : 'Visual',
 	\ 'V'  : 'V·Line',
-	\ '' : 'V·Block',
+	\ '' : 'V·Block',
 	\ 's'  : 'Select',
 	\ 'S'  : 'S·Line',
 	\ '' : 'S·Block',
