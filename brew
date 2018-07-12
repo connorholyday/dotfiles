@@ -1,7 +1,14 @@
 #!/bin/bash
 
+brew update
+brew upgrade
+
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
+brew install coreutils
+brew install moreutils
 brew install findutils
+brew install gnu-sed --with-default-names
+brew install grep
 
 # Install Bash 4
 brew install bash
@@ -20,6 +27,7 @@ brew install tree
 brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 
 brew cask install hyper
+brew cask install kitty
 brew cask install flux
 brew cask install slack
 brew cask install spectacle
@@ -44,3 +52,5 @@ brew install --HEAD --with-tmp-logging chunkwm
 brew install --HEAD --with-logging koekeishiya/formulae/skhd
 brew services start chunkwm
 brew services start skhd
+
+brew cleanup
