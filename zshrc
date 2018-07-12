@@ -4,23 +4,13 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/connorholyday/.oh-my-zsh
 
-# Theme
 ZSH_THEME=""
 
-# NVM
 export NVM_LAZY_LOAD=true
-
-# Uncomment the following line to use hyphen-insensitive completion. Case
-# sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
 plugins=(
   zsh-nvm
   git
@@ -34,6 +24,7 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
+source ~/.bash_aliases
 
 # Enable pure prompt
 autoload -Uz promptinit
@@ -45,22 +36,9 @@ export EDITOR="nvim"
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
-# Aliases
-alias tower="gittower ."
-
-# Go development
-export GOPATH="${HOME}/.go"
-export GOROOT="$(brew --prefix golang)/libexec"
-export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
-test -d "${GOPATH}" || mkdir "${GOPATH}"
-test -d "${GOPATH}/src/github.com" || mkdir -p "${GOPATH}/src/github.com"
-
-# Ripgrep config
 export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
 
 # Export highway
 
-# export PATH="/usr/local/opt/php@7.0/bin:$PATH"
-# export PATH="/usr/local/opt/php@7.0/sbin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PHP_AUTOCONF="/usr/local/bin/autoconf"
