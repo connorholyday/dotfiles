@@ -26,10 +26,13 @@ Plug 'mattn/emmet-vim', { 'for': ['html', 'html.twig', 'blade'] }
 Plug 'sheerun/vim-polyglot'
 Plug 'arnaud-lb/vim-php-namespace', { 'for': 'php' }
 Plug 'chrisbra/Colorizer'
-Plug 'connorholyday/vim-snazzy'
 Plug 'SirVer/ultisnips'
 Plug 'mhinz/vim-signify'
 Plug 'janko-m/vim-test'
+
+" colorschemes
+Plug 'connorholyday/vim-snazzy'
+Plug 'NLKNguyen/papercolor-theme'
 
 if g:has_async
     Plug 'w0rp/ale'
