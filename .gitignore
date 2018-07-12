@@ -2,3 +2,5 @@ tags
 vim/plugged
 vim/autoload
 vim/undo
+config/
+!config/nvim/init.vim
