@@ -80,14 +80,24 @@ set undoreload=10000
 "====================
 
 syntax enable
-set background=dark
 
 " Allow color schemes to do bright colors without forcing bold
 if &t_Co == 8 && $TERM !~# '^linux\|^Eterm'
   set t_Co=16
 endif
 
-colorscheme snazzy
+if empty($VIMCOLOR)
+    let $VIMCOLOR = "snazzy"
+elseif $VIMCOLOR == "PaperColor" && empty($VIMBG)
+    let $VIMBG = "light"
+endif
+
+if empty($VIMBG)
+    let $VIMBG = "dark"
+endif
+
+execute "set background=".$VIMBG
+execute "colorscheme ".$VIMCOLOR
 
 "====================
 " REMAPS
