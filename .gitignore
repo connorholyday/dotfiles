@@ -5,3 +5,4 @@ vim/undo
 config/
 !config/nvim/init.vim
 !config/kitty/kitty.conf
+!config/kitty/snazzy.conf
