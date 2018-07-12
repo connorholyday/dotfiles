@@ -103,6 +103,14 @@ execute "colorscheme ".$VIMCOLOR
 " REMAPS
 "====================
 
+function ColorSwitch()
+    let &background = (&background == "dark" ? "light" : "dark")
+    let $VIMCOLOR = (&background == "dark" ? "snazzy" : "PaperColor")
+    color $VIMCOLOR
+endfunction
+
+nnoremap <silent> <Leader>bg :call ColorSwitch()<CR>
+
 inoremap jj <Esc>
 inoremap jk <Esc>
 
