@@ -29,6 +29,7 @@ Plug 'chrisbra/Colorizer'
 Plug 'SirVer/ultisnips'
 Plug 'mhinz/vim-signify'
 Plug 'janko-m/vim-test'
+Plug 'itchyny/lightline.vim'
 
 " colorschemes
 Plug 'connorholyday/vim-snazzy'
@@ -50,6 +51,9 @@ let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips']
 
+let g:lightline = {
+                \ 'colorscheme': 'snazzy',
+                \ }
 "====================
 " SETUP
 "====================
