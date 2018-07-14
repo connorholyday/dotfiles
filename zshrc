@@ -33,6 +33,22 @@ prompt pure
 
 export EDITOR="nvim"
 
+function gpr {
+  # `git pull --rebase` with automatic stash and attempt to restore
+  MOD_COUNT=$(git status --porcelain --untracked-files=no | wc -l)
+  if [ $MOD_COUNT -gt 0 ]; then
+    if git stash save "git pull --rebase stash" && git pull --rebase && git stash apply && git stash drop; then
+      echo "Success";
+    else
+      echo
+      echo
+      echo "WARNING: Something failed! Read the above!"
+    fi
+  else
+    git pull --rebase
+  fi
+}
+
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
