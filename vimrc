@@ -103,7 +103,7 @@ execute "colorscheme ".$VIMCOLOR
 " REMAPS
 "====================
 
-function ColorSwitch()
+function! ColorSwitch()
     let &background = (&background == "dark" ? "light" : "dark")
     let $VIMCOLOR = (&background == "dark" ? "snazzy" : "PaperColor")
     color $VIMCOLOR
