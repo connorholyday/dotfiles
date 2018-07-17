@@ -54,6 +54,7 @@ function gpr {
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
+export FZF_DEFAULT_COMMAND='rg --files --hidden --glob "!.git/*"'
 
 # Export highway
 

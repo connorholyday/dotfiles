@@ -17,14 +17,15 @@ brew install zsh
 brew install vim
 brew install neovim
 
-brew install ripgrep
-brew install fd
 brew install git
 brew install tig
 brew install imagemagick
 brew install node
 brew install tree
 brew install --HEAD universal-ctags/universal-ctags/universal-ctags
+brew install ripgrep
+brew install fd
+brew install fzf
 
 brew cask install hyper
 brew cask install kitty

@@ -31,6 +31,10 @@ Plug 'mhinz/vim-signify'
 Plug 'janko-m/vim-test'
 Plug 'itchyny/lightline.vim'
 
+" fzf
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
+
 " colorschemes
 Plug 'connorholyday/vim-snazzy'
 Plug 'NLKNguyen/papercolor-theme'
@@ -122,6 +126,11 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+nnoremap <BS> <C-^>
+
+if executable('fzf')
+    nnoremap <C-p> :Files<CR>
+endif
 
 if has('nvim')
     if exists(':tnoremap')
