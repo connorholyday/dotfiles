@@ -2,8 +2,6 @@
 " PLUGINS
 "====================
 
-let g:has_async = v:version >= 800 || has('nvim')
-
 if empty(glob('~/.vim/autoload/plug.vim'))
     silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
         \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -21,15 +19,22 @@ Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-abolish'
 Plug 'Olical/vim-enmasse'
-Plug 'editorconfig/editorconfig-vim'
-Plug 'mattn/emmet-vim', { 'for': ['html', 'html.twig', 'blade'] }
-Plug 'sheerun/vim-polyglot'
-Plug 'arnaud-lb/vim-php-namespace', { 'for': 'php' }
 Plug 'chrisbra/Colorizer'
-Plug 'SirVer/ultisnips'
 Plug 'mhinz/vim-signify'
 Plug 'janko-m/vim-test'
 Plug 'itchyny/lightline.vim'
+
+" languages
+Plug 'sheerun/vim-polyglot'
+Plug 'SirVer/ultisnips'
+Plug 'arnaud-lb/vim-php-namespace', { 'for': 'php' }
+
+" linting
+Plug 'w0rp/ale'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }
 
 " fzf
 Plug '/usr/local/opt/fzf'
@@ -38,10 +43,6 @@ Plug 'junegunn/fzf.vim'
 " colorschemes
 Plug 'connorholyday/vim-snazzy'
 Plug 'NLKNguyen/papercolor-theme'
-
-if g:has_async
-    Plug 'w0rp/ale'
-endif
 
 call plug#end()
 
@@ -58,6 +59,7 @@ let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips']
 let g:lightline = {
                 \ 'colorscheme': 'snazzy',
                 \ }
+
 "====================
 " SETUP
 "====================
@@ -89,11 +91,6 @@ set undoreload=10000
 
 syntax enable
 
-" Allow color schemes to do bright colors without forcing bold
-if &t_Co == 8 && $TERM !~# '^linux\|^Eterm'
-  set t_Co=16
-endif
-
 if empty($VIMCOLOR)
     let $VIMCOLOR = "snazzy"
 elseif $VIMCOLOR == "PaperColor" && empty($VIMBG)
@@ -118,9 +115,6 @@ function! ColorSwitch()
 endfunction
 
 nnoremap <silent> <Leader>bg :call ColorSwitch()<CR>
-
-inoremap jj <Esc>
-inoremap jk <Esc>
 
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
