@@ -76,14 +76,17 @@ set nowritebackup
 set noswapfile
 set nrformats-=octal
 set showcmd
-set path+=**
-set wildmenu
 set scrolloff=5
 set sidescrolloff=5
 set undofile
 set undodir=$HOME/.vim/undo
 set undolevels=1000
 set undoreload=10000
+set path+=**
+set wildmenu
+set wildignore+=*/node_modules/*
+set wildignore+=*/bower_components/*
+set wildignore+=.git
 
 "====================
 " COLORSCHEME
