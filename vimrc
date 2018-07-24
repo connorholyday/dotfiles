@@ -127,7 +127,7 @@ nnoremap <BS> <C-^>
 nnoremap <C-w>a <C-w>\|<C-w>_
 
 if executable('fzf')
-    nnoremap <C-p> :Files<CR>
+    nnoremap <C-p> :GFiles<CR>
 endif
 
 if has('nvim')
