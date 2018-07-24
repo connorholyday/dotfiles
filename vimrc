@@ -124,6 +124,7 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 nnoremap <BS> <C-^>
+nnoremap <C-w>a <C-w>\|<C-w>_
 
 if executable('fzf')
     nnoremap <C-p> :Files<CR>
