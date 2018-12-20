@@ -50,3 +50,5 @@
 [user]
 	name = Connor Holyday
 	email = connorholyday@gmail.com
+[pull]
+	rebase = true
