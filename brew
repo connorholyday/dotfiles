@@ -16,6 +16,7 @@ brew install zsh
 
 brew install vim
 brew install neovim
+brew install starship
 
 brew install git
 brew install tig
