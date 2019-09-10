@@ -1,1 +1,1 @@
-/Users/connorholyday/.vimrc
+/Users/connor/dotfiles/vimrc
