@@ -26,10 +26,8 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 source ~/.bash_aliases
 
-# Enable pure prompt
-autoload -Uz promptinit
-promptinit
-prompt pure
+# Enable prompt
+eval "$(starship init zsh)"
 
 export EDITOR="nvim"
 
