@@ -25,7 +25,6 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 source ~/.bash_aliases
-source ~/.bash_aliases.local
 
 # Enable pure prompt
 autoload -Uz promptinit
