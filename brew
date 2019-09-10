@@ -34,9 +34,7 @@ brew install bat
 brew cask install kitty
 brew cask install flux
 brew cask install slack
-brew cask install spectacle
 brew cask install spotify
-brew cask install sequel-pro
 brew cask install appcleaner
 brew cask install skitch
 brew cask install dropbox
@@ -50,11 +48,5 @@ brew cask install font-fira-code
 
 brew tap thoughtbot/formulae
 brew install rcm
-
-brew tap crisidev/homebrew-chunkwm
-brew install --HEAD --with-tmp-logging chunkwm
-brew install --HEAD --with-logging koekeishiya/formulae/skhd
-brew services start chunkwm
-brew services start skhd
 
 brew cleanup
