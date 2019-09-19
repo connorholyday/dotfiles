@@ -19,10 +19,10 @@ Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-abolish'
 Plug 'Olical/vim-enmasse'
-Plug 'chrisbra/Colorizer'
 Plug 'mhinz/vim-signify'
 Plug 'janko-m/vim-test'
 Plug 'itchyny/lightline.vim'
+Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 
 " languages
 Plug 'sheerun/vim-polyglot'
@@ -43,6 +43,7 @@ Plug 'junegunn/fzf.vim'
 " colorschemes
 Plug 'connorholyday/vim-snazzy'
 Plug 'NLKNguyen/papercolor-theme'
+Plug 'haishanh/night-owl.vim'
 
 call plug#end()
 
@@ -56,9 +57,7 @@ let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips']
 
-let g:lightline = {
-                \ 'colorscheme': 'snazzy',
-                \ }
+let g:Hexokinase_highlighters = [ 'virtual' ]
 
 "====================
 " SETUP
@@ -94,18 +93,10 @@ set wildignore+=.git
 
 syntax enable
 
-if empty($VIMCOLOR)
-    let $VIMCOLOR = "snazzy"
-elseif $VIMCOLOR == "PaperColor" && empty($VIMBG)
-    let $VIMBG = "light"
-endif
-
-if empty($VIMBG)
-    let $VIMBG = "dark"
-endif
-
-execute "set background=".$VIMBG
-execute "colorscheme ".$VIMCOLOR
+let g:lightline = {
+                \ 'colorscheme': 'snazzy',
+                \ }
+execute "colorscheme snazzy"
 
 "====================
 " REMAPS
