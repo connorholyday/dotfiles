@@ -30,6 +30,7 @@ brew install ripgrep
 brew install fd
 brew install fzf
 brew install bat
+brew install go
 
 brew cask install kitty
 brew cask install flux

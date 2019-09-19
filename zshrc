@@ -38,3 +38,6 @@ export FZF_DEFAULT_COMMAND='rg --files --hidden --no-ignore --glob "!.git/*"'
 
 export PATH="/usr/local/sbin:$PATH"
 export PHP_AUTOCONF="/usr/local/bin/autoconf"
+export GOPATH="${HOME}/.go"
+export GOROOT="$(brew --prefix golang)/libexec"
+export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
