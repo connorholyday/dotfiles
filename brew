@@ -25,7 +25,6 @@ brew install imagemagick
 brew install node
 brew install yarn
 brew install tree
-brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 brew install ripgrep
 brew install fd
 brew install fzf
@@ -33,19 +32,14 @@ brew install bat
 brew install go
 
 brew cask install kitty
-brew cask install flux
 brew cask install slack
 brew cask install spotify
 brew cask install appcleaner
-brew cask install skitch
 brew cask install dropbox
 brew cask install google-chrome
 brew cask install opera
 brew cask install firefox
 brew cask install visual-studio-code
-
-brew tap caskroom/fonts
-brew cask install font-fira-code
 
 brew tap thoughtbot/formulae
 brew install rcm
